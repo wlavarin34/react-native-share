@@ -46,11 +46,6 @@ RCT_EXPORT_MODULE();
         [items setObject: video forKey: @"com.instagram.sharedSticker.backgroundVideo"];
     }
 
-    if(![options[@"attributionURL"] isEqual:[NSNull null]] && options[@"attributionURL"] != nil) {
-        NSString *attrURL = [RCTConvert NSString:options[@"attributionURL"]];
-        [items setObject: attrURL forKey: @"com.instagram.sharedSticker.contentURL"];
-    }
-
     NSString *backgroundTopColor;
      if(![options[@"backgroundTopColor"] isEqual:[NSNull null]] && options[@"backgroundTopColor"] != nil) {
         backgroundTopColor = [RCTConvert NSString:options[@"backgroundTopColor"]];
